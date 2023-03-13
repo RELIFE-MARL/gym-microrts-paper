@@ -9,10 +9,8 @@ This repo contains the code for the paper [Gym-μRTS: Toward Affordable Deep Rei
 Make sure you have `ffmpeg` and `jdk>=1.8.0` installed. Then install the dependencies:
 
 ```bash
-git clone https://github.com/vwxyzjn/gym-microrts-paper
-cd gym-microrts-paper
-python -m venv venv
-source venv/bin/activate
+python3.9 -m venv env
+source env/bin/activate
 pip install -r requirements.txt
 ```
 
