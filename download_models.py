@@ -2,6 +2,7 @@ import argparse
 import os
 
 import wandb
+from tqdm import tqdm
 
 parser = argparse.ArgumentParser(description="CleanRL Plots")
 # Common arguments
@@ -15,7 +16,7 @@ args = parser.parse_args()
 api = wandb.Api()
 runs = api.runs(args.wandb_project)
 
-for idx, run in enumerate(runs):
+for idx, run in tqdm(enumerate(runs)):
     exp_name = run.config["exp_name"]
     if not os.path.exists(f"trained_models/{exp_name}"):
         os.makedirs(f"trained_models/{exp_name}")

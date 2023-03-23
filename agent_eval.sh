@@ -31,5 +31,5 @@ python agent_eval.py --exp-name  ppo_gridnet_coacai_naive --agent-model-path tra
 python agent_eval.py --exp-name  ppo_gridnet_coacai_partial_mask --agent-model-path trained_models/ppo_gridnet_coacai_partial_mask/agent-1.pt \
     --max-steps 4000 --num-eval-runs 100 --wandb-entity vwxyzjn --wandb-project-name gym-microrts-paper-eval --prod-mode --capture-video
 python agent_eval.py --exp-name  ppo_gridnet_coacai_no_mask --agent-model-path trained_models/ppo_gridnet_coacai_no_mask/agent-1.pt \
-    --max-steps 4000 --num-eval-runs 100 --wandb-entity vwxyzjn --wandb-project-name gym-microrts-paper-eval --prod-mode --capture-video
+    --max-steps 4000 --num-eval-runs 100 --wandb-entity thinh-huynh-re --wandb-project-name gym-microrts-paper-eval --prod-mode --capture-video
 

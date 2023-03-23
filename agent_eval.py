@@ -13,7 +13,7 @@ import numpy as np
 import gym
 import gym_microrts
 from gym.wrappers import TimeLimit, Monitor
-from gym_microrts.envs.vec_env import MicroRTSGridModeVecEnv, MicroRTSVecEnv
+from gym_microrts.envs.vec_env import MicroRTSGridModeVecEnv, MicroRTSBotVecEnv
 from gym_microrts import microrts_ai
 from gym.spaces import Discrete, Box, MultiBinary, MultiDiscrete, Space
 import time
@@ -261,7 +261,7 @@ for i in range(len(ais)):
             max_steps=args.max_steps,
             render_theme=2,
             ai2s=[ais[i]],
-            map_path="maps/16x16/basesWorkers16x16A.xml",
+            map_paths=["maps/16x16/basesWorkers16x16A.xml"],
             reward_weight=np.array([10.0, 1.0, 1.0, 0.2, 1.0, 4.0]),
         )
         envs = MicroRTSStatsRecorder(envs)
@@ -273,7 +273,8 @@ for i in range(len(ais)):
             video_length=2000,
         )
     else:
-        envs = MicroRTSVecEnv(
+        raise Exception("Could not find experiment")
+        envs = MicroRTSBotVecEnv(
             num_envs=1,
             max_steps=args.max_steps,
             render_theme=2,

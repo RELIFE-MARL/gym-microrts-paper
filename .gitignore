@@ -1,6 +1,5 @@
 env
 runs
-.vscode
 videos
 wandb
 all_data.csv
