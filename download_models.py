@@ -1,13 +1,7 @@
-from os import path
-import pickle
-import wandb
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-import os
 import argparse
-from distutils.util import strtobool
+import os
+
+import wandb
 
 parser = argparse.ArgumentParser(description="CleanRL Plots")
 # Common arguments
