@@ -46,7 +46,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--total-timesteps",
         type=int,
-        default=100000000,
+        default=100_000_000,
         help="total timesteps of the experiments",
     )
     parser.add_argument(
